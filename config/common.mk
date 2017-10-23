@@ -26,6 +26,10 @@ PRODUCT_COPY_FILES += \
     vendor/proandroid/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/proandroid/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 endif
+
+# Fix Google dialer
+PRODUCT_COPY_FILES += \
+    vendor/proandroid/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
