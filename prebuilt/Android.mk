@@ -1,0 +1,14 @@
+LOCAL_PATH := $(call my-dir)
+
+#Chromium-58.0.3029.83.apk
+include $(CLEAR_VARS)
+LOCAL_MODULE := Chromium
+LOCAL_MODULE_OWNER := yu
+LOCAL_SRC_FILES := common/apps/ChromePublic.apk
+LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_OVERRIDES_PACKAGES := Browser Browser2
+include $(BUILD_PREBUILT)
