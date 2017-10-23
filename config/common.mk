@@ -15,6 +15,17 @@ PRODUCT_COPY_FILES += \
 #APN LIST
 PRODUCT_COPY_FILES := \
      vendor/proandroid/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# LatinIME Gesture typing
+ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES += \
+    vendor/proandroid/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/proandroid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/proandroid/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/proandroid/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+endif
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
