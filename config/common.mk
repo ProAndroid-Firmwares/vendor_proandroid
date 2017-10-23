@@ -11,6 +11,10 @@ endif
 # Boot animation include
 PRODUCT_COPY_FILES += \
 	vendor/proandroid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+
+#APN LIST
+PRODUCT_COPY_FILES := \
+     vendor/proandroid/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -41,8 +45,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Chromium
-
-
 	
 # Optional packages
 PRODUCT_PACKAGES += \
