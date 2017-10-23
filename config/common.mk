@@ -8,9 +8,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-# Boot animation include
-PRODUCT_COPY_FILES += \
-	vendor/proandroid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 #APN LIST
 PRODUCT_COPY_FILES := \
@@ -30,6 +27,10 @@ endif
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
     vendor/proandroid/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
+# Boot animation include
+PRODUCT_COPY_FILES += \
+	vendor/proandroid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
