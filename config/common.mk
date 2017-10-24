@@ -53,7 +53,7 @@ SKIP_BOOT_JARS_CHECK := true
 
 # PROANDROID Required packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
+    ProandroidLauncher \
     ExactCalculator \
     Development \
     Terminal \
